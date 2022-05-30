@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Layout from '../component/Layout'
 import Image from 'next/image'
+import { prefix } from '../constants'
 
 const AboutPage: NextPage = () => {
   return (
@@ -9,7 +10,7 @@ const AboutPage: NextPage = () => {
         <div
           className='absolute top-0 w-full h-full bg-center bg-cover lg:h-screen'
           style={{
-            backgroundImage: "url('hanfeng_lake.jpg')",
+            backgroundImage: `url('${prefix}/hanfeng_lake.jpg')`,
           }}
         >
           <span id='blackOverlay' className='w-full h-full absolute opacity-50 bg-black'></span>
@@ -20,9 +21,9 @@ const AboutPage: NextPage = () => {
               <p className='p-2'>
                 In the effort to build the Three Gorges Dam, China had started a mass migration
                 project to help relocate 1.3 million residents that were affected across several
-                provinces. The old town in Kaixian, Chongqing was completely demolished, and
-                was finally submerged in the reservoir in 2008, ending its 1800-year history dating
-                back from the Han dynasty.
+                provinces. The old town in Kaixian, Chongqing was completely demolished, and was
+                finally submerged in the reservoir in 2008, ending its 1800-year history dating back
+                from the Han dynasty.
               </p>
               <p className='p-2'>
                 After that, Kaixian experienced a great economic boost. People live in new homes,
@@ -36,7 +37,12 @@ const AboutPage: NextPage = () => {
             </div>
 
             <div className='w-full lg:w-1/2 px-4 text-center max-w-[80vw] mx-auto'>
-              <img src='/old_city_kai_map.jpg' alt='old city kai map' width='400' height='324' />
+              <img
+                src={`${prefix}/old_city_kai_map.jpg`}
+                alt='old city kai map'
+                width='400'
+                height='324'
+              />
             </div>
           </div>
         </div>

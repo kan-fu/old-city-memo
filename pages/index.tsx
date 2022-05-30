@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Layout from '../component/Layout'
+import { prefix } from '../constants'
 
 const Home: NextPage = () => {
   return (
@@ -8,7 +9,7 @@ const Home: NextPage = () => {
         <div
           className='absolute top-0 w-full h-full bg-center bg-cover'
           style={{
-            backgroundImage: "url('landing.jpg')",
+            backgroundImage: `url("${prefix}/landing.jpg")`,
           }}
         >
           <span id='blackOverlay' className='w-full h-full absolute opacity-40 bg-black'></span>
