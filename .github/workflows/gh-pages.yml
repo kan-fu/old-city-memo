@@ -21,6 +21,9 @@ jobs:
 
       - name: Build my App
         run: npm run build && npm run export && touch ./out/.nojekyll
+        env:
+            NEXT_PUBLIC_GOOGLE_ANALYTICS: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS }}
+            NEXT_PUBLIC_CLOUDINARY_PRESET: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_PRESET }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
