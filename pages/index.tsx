@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Layout from '../component/Layout'
-import { prefix } from '../constants'
 
 const Home: NextPage = () => {
   return (
