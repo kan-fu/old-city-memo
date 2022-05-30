@@ -9,28 +9,29 @@ import { FullscreenControl } from 'react-leaflet-fullscreen'
 import 'react-leaflet-fullscreen/dist/styles.css'
 import memoryService from '../service/memoryService'
 import { MemoryData } from '../types'
-import Image from 'next/image'
+
 import {
   cloudinaryUrl,
   openstreetmapUrl,
   esriWaybackUrl,
   DEFAULT_ZOOM,
   MAX_ZOOM,
+  prefix,
 } from '../constants'
 import { useAuthState } from '../context'
 
 const ICON = icon({
-  iconUrl: '/leaflet/marker-icon.png',
+  iconUrl: `${prefix}/leaflet/marker-icon.png`,
   iconSize: [24, 40],
   iconAnchor: [12, 40],
 })
 const ICON_RED = icon({
-  iconUrl: '/leaflet/marker-icon-red.png',
+  iconUrl: `${prefix}/leaflet/marker-icon-red.png`,
   iconSize: [24, 40],
   iconAnchor: [12, 40],
 })
 const ICON_YELLOW = icon({
-  iconUrl: '/leaflet/marker-icon-yellow.png',
+  iconUrl: `${prefix}/leaflet/marker-icon-yellow.png`,
   iconSize: [24, 40],
   iconAnchor: [12, 40],
 })
