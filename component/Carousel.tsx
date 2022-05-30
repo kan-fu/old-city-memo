@@ -3,23 +3,6 @@ import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from 'react-icons/ai'
 import Image from 'next/image'
 import { cloudinaryUrl, carouselDelay } from '../constants'
 
-// const images = [
-//   {
-//     title: 'Find me on Twitter',
-//     link: 'https://twitter.com/kendalmintcode',
-//     imageUrl: cloudinaryUrl + '/Old_Photos_Gallery/jc5hbhwjuevnrh8valqr',
-//   },
-//   {
-//     title: 'Welcome to Ark Labs',
-//     link: 'https://ark-labs.co.uk',
-//     imageUrl: cloudinaryUrl + '/Old_Photos_Gallery/tfo7ltjf7yyuahbycyta  ',
-//   },
-//   {
-//     title: 'Some sort of third title',
-//     link: 'https://twitter.com/kendalmintcode',
-//     imageUrl: cloudinaryUrl + '/Old_Photos_Gallery/avnjcore04b0cbtgolxl',
-//   },
-// ]
 let timer: NodeJS.Timer
 const Carousel = ({ picturePath, title }: { picturePath: string[]; title: string }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -64,7 +47,7 @@ const Carousel = ({ picturePath, title }: { picturePath: string[]; title: string
     <div className='max-w-[80vw] md:max-w-md m-auto'>
       <div ref={slideRef} className='w-full h-full relative fade-anim'>
         <a href={`${cloudinaryUrl}/${picturePath[currentIndex]}`} rel='noreferrer' target='_blank'>
-          <img
+          <Image
             src={`${cloudinaryUrl}/w_400,h_300,c_pad/${picturePath[currentIndex]}`}
             alt={title}
             width='400'

@@ -9,29 +9,28 @@ import { FullscreenControl } from 'react-leaflet-fullscreen'
 import 'react-leaflet-fullscreen/dist/styles.css'
 import memoryService from '../service/memoryService'
 import { MemoryData } from '../types'
-
+import Image from 'next/image'
 import {
   cloudinaryUrl,
   openstreetmapUrl,
   esriWaybackUrl,
   DEFAULT_ZOOM,
   MAX_ZOOM,
-  prefix,
 } from '../constants'
 import { useAuthState } from '../context'
 
 const ICON = icon({
-  iconUrl: `${prefix}/leaflet/marker-icon.png`,
+  iconUrl: `/leaflet/marker-icon.png`,
   iconSize: [24, 40],
   iconAnchor: [12, 40],
 })
 const ICON_RED = icon({
-  iconUrl: `${prefix}/leaflet/marker-icon-red.png`,
+  iconUrl: `/leaflet/marker-icon-red.png`,
   iconSize: [24, 40],
   iconAnchor: [12, 40],
 })
 const ICON_YELLOW = icon({
-  iconUrl: `${prefix}/leaflet/marker-icon-yellow.png`,
+  iconUrl: `/leaflet/marker-icon-yellow.png`,
   iconSize: [24, 40],
   iconAnchor: [12, 40],
 })
@@ -113,27 +112,25 @@ const Map = ({
                     : ICON
                 }
               >
-                {console.log(username, 'and',author)}
+                {console.log(username, 'and', author)}
                 <Popup>
                   <div className={'max-w-[80vw]'}>
-                    <img
+                    <Image
                       src={`${cloudinaryUrl}/w_400,h_300,c_pad/${
                         picturePath[Math.floor(Math.random() * picturePath.length)]
                       }`}
                       alt={title}
                       width='400'
                       height='300'
-                      // layout='responsive'
+                      layout='responsive'
                     />
                   </div>
-                  {/* <Link href={`/memory/${encodeURIComponent(id as string)}`}> */}
                   <a
                     className='flex items-center justify-center underline'
                     href={`/memory/${encodeURIComponent(id as string)}`}
                   >
                     {title} ({year})
                   </a>
-                  {/* </Link> */}
                 </Popup>
               </Marker>
             ))}

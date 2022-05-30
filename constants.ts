@@ -8,4 +8,3 @@ export const carouselDelay = 5000
 
 export const baseMemoryUrl = 'https://old-city-memo.herokuapp.com/api/memories'
 export const baseAuthUrl = 'https://old-city-memo.herokuapp.com/api/auth'
-export const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''

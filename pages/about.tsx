@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Layout from '../component/Layout'
 import Image from 'next/image'
-import { prefix } from '../constants'
 
 const AboutPage: NextPage = () => {
   return (
@@ -10,7 +9,7 @@ const AboutPage: NextPage = () => {
         <div
           className='absolute top-0 w-full h-full bg-center bg-cover lg:h-screen'
           style={{
-            backgroundImage: `url('${prefix}/hanfeng_lake.jpg')`,
+            backgroundImage: `url('hanfeng_lake.jpg')`,
           }}
         >
           <span id='blackOverlay' className='w-full h-full absolute opacity-50 bg-black'></span>
@@ -37,8 +36,8 @@ const AboutPage: NextPage = () => {
             </div>
 
             <div className='w-full lg:w-1/2 px-4 text-center max-w-[80vw] mx-auto'>
-              <img
-                src={`${prefix}/old_city_kai_map.jpg`}
+              <Image
+                src={`/old_city_kai_map.jpg`}
                 alt='old city kai map'
                 width='400'
                 height='324'

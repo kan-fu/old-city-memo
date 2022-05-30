@@ -9,7 +9,7 @@ const Home: NextPage = () => {
         <div
           className='absolute top-0 w-full h-full bg-center bg-cover'
           style={{
-            backgroundImage: `url("${prefix}/landing.jpg")`,
+            backgroundImage: `url("landing.jpg")`,
           }}
         >
           <span id='blackOverlay' className='w-full h-full absolute opacity-40 bg-black'></span>
