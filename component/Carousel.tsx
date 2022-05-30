@@ -53,9 +53,9 @@ const Carousel = ({ picturePath, title }: { picturePath: string[]; title: string
             width='400'
             height='300'
             className='w-full'
-            // layout='responsive'
-            // objectFit='contain'
-            // priority={true}
+            layout='responsive'
+            objectFit='contain'
+            priority={true}
           />
         </a>
         <div
